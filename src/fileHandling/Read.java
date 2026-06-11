@@ -10,9 +10,9 @@ public class Read {
         int count = 0;
         File myObj = new File("Hello.txt");
         try(Scanner myReader = new Scanner(myObj)){
-         while(myReader.hasNext()){
+         while(myReader.hasNextLine()){
             count++;
-            System.out.println(myReader.next());
+            System.out.println(myReader.nextLine());
          }
             System.out.println(count);
         }catch(FileNotFoundException e){
